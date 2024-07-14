@@ -1,0 +1,14 @@
+/home/josh/Tutorial/C#/ship/obj/Debug/net7.0/ship.GeneratedMSBuildEditorConfig.editorconfig
+/home/josh/Tutorial/C#/ship/obj/Debug/net7.0/ship.AssemblyInfoInputs.cache
+/home/josh/Tutorial/C#/ship/obj/Debug/net7.0/ship.AssemblyInfo.cs
+/home/josh/Tutorial/C#/ship/obj/Debug/net7.0/ship.csproj.CoreCompileInputs.cache
+/home/josh/Tutorial/C#/ship/bin/Debug/net7.0/ship
+/home/josh/Tutorial/C#/ship/bin/Debug/net7.0/ship.deps.json
+/home/josh/Tutorial/C#/ship/bin/Debug/net7.0/ship.runtimeconfig.json
+/home/josh/Tutorial/C#/ship/bin/Debug/net7.0/ship.dll
+/home/josh/Tutorial/C#/ship/bin/Debug/net7.0/ship.pdb
+/home/josh/Tutorial/C#/ship/obj/Debug/net7.0/ship.dll
+/home/josh/Tutorial/C#/ship/obj/Debug/net7.0/refint/ship.dll
+/home/josh/Tutorial/C#/ship/obj/Debug/net7.0/ship.pdb
+/home/josh/Tutorial/C#/ship/obj/Debug/net7.0/ship.genruntimeconfig.cache
+/home/josh/Tutorial/C#/ship/obj/Debug/net7.0/ref/ship.dll
