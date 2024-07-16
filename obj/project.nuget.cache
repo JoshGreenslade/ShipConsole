@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "eAzo4wGETtovYSDP1sQpefc24m1HRDo3cvL3KWAvjlE4yZzf71/nmsHz4mOuvv3U3rY60kCCh+aTA9smOmBAXg==",
+  "dgSpecHash": "jgkqg9C5N7yyPN+vpRn41hRDhrg6uaUuGM1CPNfrlLgZWZ3OQhvq643H9TjTFOtNnUiZyBjEHG61ekkv3DorIg==",
   "success": true,
   "projectFilePath": "/home/josh/Tutorial/C#/ship/ship.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/josh/.nuget/packages/spectre.console/0.49.1/spectre.console.0.49.1.nupkg.sha512"
+  ],
   "logs": []
 }

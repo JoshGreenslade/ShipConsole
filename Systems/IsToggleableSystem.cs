@@ -8,7 +8,7 @@ public class IsToggleableSystem : System
 {
     public IsToggleableSystem() { }
 
-    public void toggle(Entity entity)
+    public void Toggle(Entity entity)
     {
         if (!entity.HasComponent<IsToggleableComponent>())
             return;
@@ -17,7 +17,7 @@ public class IsToggleableSystem : System
         EventBus.Publish(new ToggledEvent(entity, component.IsOn));
     }
 
-    public void setState(Entity entity, bool state)
+    public void SetState(Entity entity, bool state)
     {
         if (!entity.HasComponent<IsToggleableComponent>())
             return;

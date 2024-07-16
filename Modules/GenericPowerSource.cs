@@ -1,6 +1,7 @@
 namespace Ship.Modules;
 
 using Ship.Entities;
+using Ship.Views;
 using Ship.Components;
 
 public class GenericPowerSource : ShipModule

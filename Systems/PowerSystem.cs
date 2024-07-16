@@ -18,7 +18,6 @@ public class PowerSystem : System
     public void handlePowerSourceToggled(ToggledEvent toggledEvent)
     {
         Entity entity = toggledEvent.entity;
-        Console.WriteLine($"Avaliable Power: {AvailablePower}");
 
         if (!entity.HasComponent<GeneratesPowerComponent>())
             return;
@@ -36,8 +35,6 @@ public class PowerSystem : System
             TotalPower -= component.currentPower;
             AvailablePower -= component.currentPower;
         }
-        Console.WriteLine($"Avaliable Power: {AvailablePower}");
-
     }
 
     public void handlePowerConsumerToggled(ToggledEvent toggledEvent)
@@ -66,7 +63,5 @@ public class PowerSystem : System
             AvailablePower += component.currentPowerDraw;
             component.currentPowerDraw = 0;
         }
-        Console.WriteLine($"Avaliable Power: {AvailablePower}");
-
     }
 }
