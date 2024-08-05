@@ -1,1 +1,2 @@
 [] Create a rendering system 
+[] Add a middleware pattern to handle text rendering

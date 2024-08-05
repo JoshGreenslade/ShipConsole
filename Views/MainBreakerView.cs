@@ -11,17 +11,22 @@ namespace Ship.Views
 
         private ShipModule _module;
         private Text _text;
-        private Box _box;
+        private Box _mainBox;
+        private Box _menuBox;
+        private static int _menuBoxWidth = (int)((double)Console.BufferWidth / 4.0);
 
         public MainBreakerView(ShipModule module)
         {
             _module = module;
 
             IsToggleableComponent toggleComponent = _module.GetComponent<IsToggleableComponent>();
-            _box = new Box(0, 0, height: Console.BufferHeight - 2);
-            _text = new Text(GetBreakerStatus(), 20, 10);
+            _menuBox = new Box(left: 0, top: 0, width: _menuBoxWidth);
+            _mainBox = new Box(left: _menuBoxWidth - 1, top: 0);
+            _text = new Text(GetBreakerStatus(), _mainBox.CentreWidth, _mainBox.CentreHeight);
+            _text.alignment = TextAlignment.Centre;
 
-            _box.Render();
+            _menuBox.Render();
+            _mainBox.Render();
 
         }
 

@@ -1,25 +1,31 @@
-using Spectre.Console.Rendering;
-
 namespace Ship.ShipConsole;
 
 public class Box
 {
+
+    // Definitions
     public int Top;
     public int Left;
     public int Width;
     public int Height;
+
+    // Location References
+    public int CentreHeight => Top + (int)Math.Round(Height / 2.0);
+    public int CentreWidth => Left + (int)Math.Round(Width / 2.0);
+
+    // Stylising
     public char Border = '-';
 
-    public Box(int top = 0, int left = 0, int? width = null, int? height = null)
+    public Box(int left = 0, int top = 0, int? width = null, int? height = null)
     {
         Top = top;
         Left = left;
         if (width == null)
-            Width = Console.BufferWidth;
+            Width = Console.BufferWidth - Left;
         else
             Width = (int)width;
         if (height == null)
-            Height = Console.BufferHeight;
+            Height = Console.BufferHeight - Top;
         else
             Height = (int)height;
     }
