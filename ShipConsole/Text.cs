@@ -27,6 +27,7 @@ public class Text
         _rendering = true;
         Console.SetCursorPosition(Left, Top);
         this.Write();
+        Console.SetCursorPosition(0, Console.BufferHeight - 1);
         _rendering = false;
     }
 }

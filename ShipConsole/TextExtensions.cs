@@ -22,7 +22,7 @@ public static class TextExtensions
             myText = myText.Replace(key, validTextFormatCommands[key]);
         }
         myText += validTextFormatCommands["*RESET*"];
-        myText.PadRight()
+        // myText.PadRight();
         Console.Write(myText);
     }
 

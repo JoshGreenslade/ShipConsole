@@ -6,21 +6,36 @@ using Text = Ship.ShipConsole.Text;
 
 namespace Ship.Views
 {
-    public static class MainBreakerView
+    public class MainBreakerView
     {
 
-        public static void Render(this MainBreakerModule mainBreaker)
+        private ShipModule _module;
+        private Text _text;
+        private Box _box;
+
+        public MainBreakerView(ShipModule module)
         {
-            IsToggleableComponent toggleComponent = mainBreaker.GetComponent<IsToggleableComponent>();
-            Box box = new Box(0, 0);
-            Text text = new Text(GetBreakerStatus(toggleComponent.IsOn), 20, 10);
-            box.Render();
-            text.Render();
+            _module = module;
+
+            IsToggleableComponent toggleComponent = _module.GetComponent<IsToggleableComponent>();
+            _box = new Box(0, 0, height: Console.BufferHeight - 2);
+            _text = new Text(GetBreakerStatus(), 20, 10);
+
+            _box.Render();
+
+        }
+
+        public void Render()
+        {
+            _text.Update(GetBreakerStatus());
+            _text.Render();
         }
 
 
-        private static string GetBreakerStatus(bool breakerState)
+        private string GetBreakerStatus()
         {
+            IsToggleableComponent toggleComponent = _module.GetComponent<IsToggleableComponent>();
+            bool breakerState = toggleComponent.IsOn;
             return $"Main breaker is {(breakerState ? "*B**GREEN*ON" : "*B**RED**SWAP*OFF")}";
         }
     }

@@ -29,15 +29,15 @@ class Program
         Console.Clear();
         Console.CursorVisible = false;
 
+        MainBreakerView view = new MainBreakerView(mainBreaker);
 
         // Main loop
         Task renderTask = Task.Run(async () =>
         {
             while (true)
             {
-                mainBreaker.Render();
-                isToggleableSystem.Toggle(mainBreaker);
-                await Task.Delay(1000);
+                view.Render();
+                await Task.Delay(25);
             }
         });
 
@@ -45,7 +45,12 @@ class Program
         {
             while (true)
             {
-                Console.ReadKey();
+                Console.SetCursorPosition(0, Console.BufferHeight - 1);
+                var key = Console.ReadKey();
+                if (key.Key == ConsoleKey.UpArrow)
+                {
+                    isToggleableSystem.Toggle(mainBreaker);
+                }
             }
         });
 
