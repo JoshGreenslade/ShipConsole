@@ -1,7 +1,10 @@
 namespace Ship.ShipConsole;
 
-public class Box
+public class Box : IRenderable
 {
+
+    // Control
+    public bool RequiresRerender { get; set; } = false;
 
     // Definitions
     public int Top;
@@ -43,5 +46,6 @@ public class Box
             Console.SetCursorPosition(Left + Width - 1, Top + i);
             Console.Write(Border);
         }
+        RequiresRerender = false;
     }
 }

@@ -1,2 +1,21 @@
-[] Create a rendering system 
+Story 1
+    System boots up
+    Nothing working
+    Navigate to main breaker 
+    Switch to On
+    Still nothing working - but basic functions now running off low-power long term batteries
+    Navigate to power generator and switch On
+    Main computer nominal on power
+
+
+
+===============
+[] Create a rendering system
+    [] Should be able to update asynchronously 
+    [] Shouldn't need to refresh everything every time
+    [] Should be able to tie modules to views
+    [] Should be easy to create new layouts
+[] Power system
+    [] Add Generators
+    [] Add battery storage
 [] Add a middleware pattern to handle text rendering

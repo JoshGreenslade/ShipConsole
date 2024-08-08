@@ -6,10 +6,14 @@ namespace Ship.Systems;
 
 public class IsToggleableSystem : System
 {
-    public IsToggleableSystem() { }
-
-    public void Toggle(Entity entity)
+    public IsToggleableSystem()
     {
+        EventBus.Subscribe<ToggleRequestEvent>(OnToggleRequest);
+    }
+
+    public void OnToggleRequest(ToggleRequestEvent toggleRequestEvent)
+    {
+        var entity = toggleRequestEvent.entity;
         if (!entity.HasComponent<IsToggleableComponent>())
             return;
         var component = entity.GetComponent<IsToggleableComponent>();

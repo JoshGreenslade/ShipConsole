@@ -15,3 +15,13 @@ public class ToggledEvent : Event
     }
 
 }
+
+public class ToggleRequestEvent : Event
+{
+    public Entity entity { get; }
+
+    public ToggleRequestEvent(Entity triggeringEntity)
+    {
+        entity = triggeringEntity;
+    }
+}

@@ -8,13 +8,16 @@ public enum TextAlignment
     Centre
 }
 
-public class Text
+public class Text : IRenderable
 {
+
+    // Control
+    public bool RequiresRerender { get; set; } = false;
+
     // Definitions
     public string _Text { get; set; } = string.Empty;
     public int Left = 0;
     public int Top = 0;
-    public bool _rendering = false;
 
     // Stylising
     public TextAlignment alignment { get; set; } = TextAlignment.Left;
@@ -35,7 +38,6 @@ public class Text
 
     public void Render()
     {
-        _rendering = true;
         if (alignment == TextAlignment.Left)
         {
             Console.SetCursorPosition(Left, Top);
@@ -50,6 +52,6 @@ public class Text
         }
         this.Write();
         Console.SetCursorPosition(0, Console.BufferHeight - 1);
-        _rendering = false;
+        RequiresRerender = false;
     }
 }
